@@ -1,0 +1,174 @@
+/* RESET GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* HERO (Banner del Olimpo) */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+  }
+  
+  .banner-img {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffcc0081;
+    background-size: cover;
+    background-position: center;
+    animation: dropFromOlympus 1s ease-out forwards;
+    filter: brightness(0.85);
+  }
+  
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+  }
+  
+  .hero-text h1 {
+    font-size: 6rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-text p {
+    font-size: 1.5rem;
+  }
+  
+  /* Animación estilo Olimpo */
+  @keyframes dropFromOlympus {
+    from {
+      top: -100%;
+      opacity: 0;
+    }
+    to {
+      top: 0;
+      opacity: 1;
+    }
+  }
+  
+  .services-section {
+    padding: 4rem 2rem;
+    background-color: #000000;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #acacac;
+    font-weight: bold;
+  }
+  
+  .service-categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .service-box {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: transform 0.3s ease;
+  }
+  
+  .service-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  
+  .service-box:hover img {
+    transform: scale(1.1);
+  }
+  
+  .service-label {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* CONTACTO */
+  .contacto {
+    padding: 2rem;
+    background-color: #222;
+    color: #eee;
+    text-align: center;
+  }
+  
+  .contacto h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #ffcc00;
+  }
+  
+  .contacto p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .hero-text h1 {
+      font-size: 2rem;
+    }
+  
+    .hero-text p {
+      font-size: 1rem;
+    }
+  
+    .trabajos h2,
+    .contacto h2 {
+      font-size: 1.5rem;
+    }
+  }
+  @media (max-width: 768px) {
+    .service-categories {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .service-box {
+      width: 90%;
+      height: 180px;
+    }
+  
+    .section-title {
+      font-size: 1.6rem;
+    }
+  
+    .service-label {
+      font-size: 1rem;
+      padding: 0.6rem;
+    }
+  }
