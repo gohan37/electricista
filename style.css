@@ -17,6 +17,7 @@
     width: 100%;
     height: 70vh;
     overflow: hidden;
+    background-color: #ffcc0081;
   }
   
   .banner-img {
